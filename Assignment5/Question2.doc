@@ -1,0 +1,17 @@
+# Question 2
+# Implement selection sort algorithm using Python.
+
+#Answer:::
+
+arr = [10,2,5,22,12]
+
+for i in range(len(arr)):
+    minimum = i 
+    for j in range(i+1,len(arr)):
+        if arr[minimum] > arr[j]:
+            minimum = j
+
+    arr[i],arr[minimum] = arr[minimum],arr[i] 
+
+print(arr)
+

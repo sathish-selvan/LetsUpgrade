@@ -1,0 +1,42 @@
+# Question 3
+# Implement pop operation of the stack
+
+#Answer:::
+
+
+global l1,top,size
+l1= list()
+top = -1
+size = 5
+
+def push(x):
+    global top, l1, size
+    if top == size-1:
+        print("stack Overflow")
+    else:
+        top += 1
+        l1.append(x)
+
+def pop():
+    global top, l1
+    if top == -1:
+        print("No Elements to pop")
+    else:
+        top -= 1
+        l1.pop()
+
+def show():
+    global top,l1
+    if top == -1:
+        print("stack underflow")
+    else:
+        for i in range(len(l1)-1,-1,-1):
+            print(l1[i])
+
+push(10)
+push(20)
+push(30)
+
+pop()
+
+show()

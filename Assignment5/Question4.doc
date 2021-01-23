@@ -1,0 +1,51 @@
+# Question 4
+# Implement dequeue operation of the queue
+
+# Answer:::
+global l1,rear,front
+l1 = list()
+front = -1
+rear = -1
+def enqueue(x):
+    global l1,rear,front
+    
+    l1.append(x)
+    rear += 1
+    if front == -1:
+        front += 1
+    
+def dequeue():
+    global l1,rear,front
+    if rear == 0:
+        l1.pop(0)
+        rear -= 1
+        front -= 1
+        
+        return
+    if front == -1:
+        print("Queue is Empty")
+        return
+    l1.pop(0)
+    rear -= 1
+    
+
+def display():
+    global l1
+    for i in l1[::-1]:
+        print(i, end=" ")
+    print(" ")
+        
+
+enqueue(12)
+enqueue(11)
+enqueue(10)
+
+display()
+
+dequeue()
+dequeue()
+dequeue()
+dequeue()
+
+display()
+
